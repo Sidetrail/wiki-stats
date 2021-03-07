@@ -32,7 +32,7 @@ class App extends React.Component {
         <ControlPanel />
         <MessageData data={this.state.activeFilter(this.state.data)} />
         <UserData data={this.state.activeFilter(this.state.data)} />
-        <GeoData data={this.state.activeFilter(this.state.data)} />
+        <GeoData data={this.state.activeFilter(this.state.data.filter((message) => message.geo_ip))} />
       </div>
     );
   }
